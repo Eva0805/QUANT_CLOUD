@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace命名空间，必须与创建maven groupId + artifactId组成
+否则，在配置文件mybatis.xml中无法找到映射文件
+-->
+<mapper namespace="com.xzy">
+    <!-- resultMap标签:映射实体类与数据库表
+         type属性：表示实体类名
+         id属性：为实体类与数据库表映射的唯一名字
+    -->
+    <resultMap type="studentBean" id="studentMap">
+        <!-- id标签:映射主键属性;result标签：映射非主键属性
+             property属性:实体bean类属性名
+             column属性：数据库表的字段名
+             顺序无关，字段需对应
+        -->
+        <id property="studentID" column="studentID"/>
+        <result property="age" column="age"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <insert id="Insert" parameterType="studentBean">
+        INSERT INTO student (name, age, studentID) VALUES (#{name},#{age},#{studentID});
+    </insert>
+    <!--条件查询，注意部分字符需转义，如小于,<![CDATA[ < ]]>
+    resultMap为上诉建立的实体对象
+    -->
+    <select id="findByCondition" parameterType="int" resultMap="studentMap">
+        select * from student where age <![CDATA[ < ]]>#{age};
+    </select>
+</mapper>
