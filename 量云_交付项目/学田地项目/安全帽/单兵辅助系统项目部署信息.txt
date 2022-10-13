@@ -1,0 +1,38 @@
+项目名称：单兵辅助系统（assistant）
+
+1.前端项目代码存放（需授权访问，目前仅黄钊可以访问代码）
+内网：http://192.168.0.21/huangzhao/assistant.git
+外网：http://jk.mywind.com.cn:8793/huangzhao/assistant.git
+
+2.后端接口API项目代码存放（需授权访问，目前仅黄钊可以访问代码）
+内网：http://192.168.0.21/huangzhao/assistantapi.git
+外网：http://jk.mywind.com.cn:8793/huangzhao/assistantapi.git
+
+3.数据库（mysql）
+ip:192.168.0.161
+数据库名称：assistant
+账号：devadmin
+密码：MY_huolinhe@2019
+
+
+4.测试环境（192.168.0.27）
+
+前端测试地址：（测试账号：test/123456,admin/123456）
+ 内网：http://192.168.0.27:8880/assistant
+ 外网：https://jk.mywind.com.cn/assistant
+
+
+API接口测试地址：
+
+ 内网：http://192.168.0.27:8881/assistantapi/doc.html
+ 外网：https://jk.mywind.com.cn/assistantapi/doc.html
+
+5.项目jenkins自动部署地址
+	http://192.168.0.21:18082
+	admin/admin
+ (1)前端项目名称：	assistant-dev
+ (2)接口项目名称：	assistantapi-dev
+
+
+
+

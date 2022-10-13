@@ -1,0 +1,7 @@
+µØÖ·£º
+https://gdvi.itecsun.com:3005
+wss://gdvi.itecsun.com:9090/socket.io/?EIO=3&transport=websocket
+
+¶Ë¿Ú£º
+TCP:20-22,3005,8181,9090
+UDP:10000-11000
